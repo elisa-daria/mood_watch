@@ -32,7 +32,7 @@ const Login = () => {
       localStorage.setItem("token", token);
       dispatch(logInUser({ email, token }));
       setIsLoading(false);
-      navigate("/auth/profile");
+      navigate("/");
     } catch (error) {
       console.log("Login failed " + error);
       setIsLoading(false);
