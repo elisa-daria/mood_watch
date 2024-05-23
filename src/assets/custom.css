@@ -13620,4 +13620,44 @@ Image {
 #searchBtn {
   border-radius: 4px;
   font-family: "Allerta Stencil", sans-serif;
+}
+
+@keyframes colorCycle {
+  0% {
+    border-color: #f65542;
+    color: #f65542;
+  }
+  20% {
+    border-color: #f4912f;
+    color: #f4912f;
+  }
+  40% {
+    border-color: #f5e85a;
+    color: #f5e85a;
+  }
+  60% {
+    border-color: #03ca92;
+    color: #03ca92;
+  }
+  80% {
+    border-color: #04a5ea;
+    color: #04a5ea;
+  }
+  100% {
+    border-color: #a17ae2;
+    color: #a17ae2;
+  }
+}
+.playground {
+  border-radius: 4px;
+  padding: 1.5em;
+}
+.playground .wrapper {
+  height: 500px;
+}
+
+.playground-btn {
+  background-color: transparent;
+  border: 3px solid;
+  animation: colorCycle 5s infinite;
 }/*# sourceMappingURL=custom.css.map */
