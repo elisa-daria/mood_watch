@@ -1,0 +1,80 @@
+@import "./variables";
+// to center element in the page
+@mixin gettingCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//adding animation on "gets bigger"
+@mixin movieTransition {
+  transition: width 2s ease-in-out 0s, height 2s ease-in-out 0s;
+
+  &:hover {
+    width: 120%;
+    height: 120%;
+    z-index: 1;
+  }
+}
+// opacity animation
+@mixin hideAndSeek($duration: 5s) {
+  animation: magicH $duration linear 0s infinite alternate;
+
+  @keyframes magicH {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+//drop-shadow
+@mixin hover-shadow {
+  transition: filter 350ms;
+  &:hover {
+    filter: drop-shadow(0 0 3em $pale-lime);
+  }
+}
+//icon changing colors interval
+@mixin changingColors {
+  animation: rainbow 20s linear 0s infinite alternate;
+  @keyframes rainbow {
+    0% {
+      color: $red;
+    }
+    25% {
+      color: $orange;
+    }
+    50% {
+      color: $yellow;
+    }
+    75% {
+      color: $green;
+    }
+    100% {
+      color: $blue;
+    }
+  }
+}
+//crown animation
+
+@mixin rotatingCrown {
+  animation: rotateAndMove 5s linear forwards;
+}
+
+@keyframes rotateAndMove {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+
+  50% {
+    transform: translateX(calc(100vw - 50%)) rotate(2turn);
+  }
+  100% {
+    transform: translateX(0) rotate(1turn);
+  }
+}

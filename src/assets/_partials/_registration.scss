@@ -1,0 +1,62 @@
+.h-r {
+  background-color: $dark-grey;
+  padding: 1em;
+  h1 {
+    font-family: $stonewall-inn-font-family;
+    font-size: 4em;
+    @media screen and (max-width: 400px) {
+      font-size: 3em;
+    }
+    text-align: center;
+    color: $text-light;
+  }
+}
+.btn.login-btn,
+.form-wrapper,
+.queen-wrapper {
+  border: 3px solid $violet;
+  color: $text-light;
+  border-radius: 3px;
+  @include gettingCentered;
+  align-items: baseline;
+  flex-direction: row;
+}
+.btn.login-btn:hover {
+  background-color: $text-light;
+  color: $dark-lavander;
+}
+.h2-queen {
+  font-family: $stonewall-inn-font-family;
+  color: $eggplant-text;
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+}
+.queen-wrapper {
+  background-color: $yellow;
+}
+.form-wrapper {
+  background-color: $eggplant-text;
+  padding: 3em;
+  margin: 3em 0;
+  border: 4px solid $lavander;
+  width: 750px;
+}
+form {
+  color: $blue;
+  display: flex;
+  flex-direction: column;
+}
+.form-control {
+  border-radius: 2px;
+  background-color: #9fe1ce;
+  border-color: $orange;
+}
+#btn-registration {
+  border-radius: 2px;
+  font-size: 1.5em;
+  font-family: $stonewall-inn-font-family;
+  @media screen and (min-width: 475px) {
+    align-self: flex-end;
+  }
+}

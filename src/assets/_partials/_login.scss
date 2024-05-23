@@ -1,0 +1,17 @@
+.h-l {
+  background-color: $dark-grey;
+  padding: 1em;
+  h1 {
+    font-family: $stonewall-inn-font-family;
+    font-size: 4em;
+    @media screen and (max-width: 400px) {
+      font-size: 3em;
+    }
+    text-align: center;
+    color: $text-light;
+  }
+}
+.login-section {
+  background-color: $red;
+  padding: 2em;
+}

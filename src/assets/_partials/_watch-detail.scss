@@ -1,0 +1,91 @@
+.providers {
+  min-width: 270px;
+  font-family: $stonewall-inn-font-family;
+  font-size: 1em;
+  border: 2px solid $violet;
+  color: $eggplant-text;
+  padding: 1.5em;
+  margin: 1em auto;
+  background-color: transparent;
+  border-radius: 8px;
+  @include gettingCentered;
+}
+.where_to_watch {
+  min-width: 270px;
+  font-size: 1em;
+  color: $violet;
+  background-color: $eggplant-text;
+  border: 2px solid $violet;
+  padding: 1em 0;
+  @include gettingCentered;
+  font-family: $stonewall-inn-font-family;
+  cursor: pointer;
+  margin: 1em auto;
+  &:hover {
+    color: $eggplant-text;
+    background-color: $violet;
+    opacity: 0.3;
+  }
+}
+.provDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  @media screen and (max-width: "768px") {
+    margin-bottom: 2em;
+  }
+  article {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  p {
+    font-family: $stonewall-inn-font-family;
+    font-size: 0.7em;
+  }
+}
+.provLogo {
+  border-radius: 23px 23px 23px 0px;
+  -webkit-border-radius: 23px 23px 23px 0px;
+  -moz-border-radius: 23px 23px 23px 0px;
+  width: 60px;
+  height: 60px;
+}
+.detailImg {
+  max-height: 750px;
+  border-radius: 8px;
+  border: 2.5px solid $violet;
+}
+.watchlistButton {
+  cursor: pointer;
+  border: 2px solid;
+  background-color: transparent;
+  padding: 0.8em;
+
+  i {
+    color: $eggplant-text;
+  }
+  @media screen and (min-width: "768px") {
+    &:hover {
+      border: none;
+      background-color: $orange;
+      padding: 1em;
+      opacity: 0.4;
+    }
+  }
+}
+.watchlistButtonActive {
+  border: none;
+  background-color: $orange;
+  padding: 1em;
+}
+.media-details {
+  color: $eggplant-text;
+  h3 {
+    font-size: 2.5em;
+  }
+}
+.media-details li {
+  list-style: none;
+}

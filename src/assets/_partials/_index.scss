@@ -1,0 +1,132 @@
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $text-light;
+}
+header,
+footer {
+  background-color: $lavander;
+  color: $eggplant-text;
+  font-family: $stonewall-inn-font-family;
+}
+.bi.bi-rainbow {
+  @include changingColors;
+}
+#logo .bi.bi-camera-reels {
+  @include hideAndSeek;
+}
+.hero {
+  background-color: $dark-grey;
+  font-family: $stonewall-inn-font-family;
+  padding: 1em 0;
+  color: $text-light;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  @include hover-shadow;
+}
+#arrow {
+  @include hideAndSeek(3s);
+  z-index: 1;
+  height: 150px;
+  width: 200px;
+  position: absolute;
+  top: 90%;
+  left: 115%;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 768px) {
+    left: 76%;
+    top: 100%;
+    transform: translate(-50%, -50%) rotate(162deg);
+    width: 98px;
+    height: 85px;
+  }
+}
+.palette a {
+  height: 80px;
+  width: 100vw;
+}
+.palette button {
+  height: 80px;
+  width: 100vw;
+}
+.palette {
+  border: 4px solid #271629;
+  border-radius: 10px;
+  padding: 0.3em;
+}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 80px;
+  width: 80px;
+  background-color: #b5a6cd;
+  border-radius: 5px;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    height: 60px;
+    width: 60px;
+  }
+}
+input[type="checkbox"]:hover {
+  background-color: $lavander;
+}
+input[type="checkbox"]:checked {
+  background-color: $eggplant-text;
+  border: 3px solid $violet;
+}
+.checkLabel {
+  color: $eggplant-text;
+  font-size: 1.5em;
+  font-family: $stonewall-inn-font-family;
+  cursor: pointer;
+}
+
+//crown btn
+#crown-me-btn {
+  border: 2.5px solid $eggplant-text;
+  color: $eggplant-text;
+  border-radius: 2px;
+  background-color: transparent;
+  font-size: larger;
+}
+#crown-me-btn:hover {
+  background-color: $eggplant-text;
+  color: $violet;
+  font-size: 2.5em;
+  border-color: $violet;
+}
+//crown element
+.crown {
+  position: relative;
+  padding: 1em;
+}
+.crown img {
+  height: 90px;
+  width: 120px;
+  transition: all 2s linear;
+  z-index: 1;
+}
+.crown img:hover {
+  @include rotatingCrown;
+  cursor: pointer;
+  z-index: 1;
+}
+#alert {
+  background-color: $lavander;
+  border-color: $dark-lavander;
+  color: $text-light;
+  border-radius: 2px;
+  margin: 1em auto;
+  text-align: center;
+}

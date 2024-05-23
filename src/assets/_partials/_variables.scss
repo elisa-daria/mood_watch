@@ -1,0 +1,38 @@
+//FONTS
+
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+$stonewall-inn-font-family: "Allerta Stencil", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+$main-font-family: "Roboto Slab", serif;
+
+//COLORS
+
+$text-light: #dbbcdf;
+$lavander: #916496;
+$dark-lavander: #453048;
+$dark-grey: #202020;
+$eggplant-text: #271629;
+$pale-lime: #d9df9b;
+//pastels
+$red: #f65542;
+$orange: #f4912f;
+$yellow: #f5e85a;
+$green: #03ca92;
+$blue: #04a5ea;
+$violet: #a17ae2;
+
+$lavander-menace-palette: (
+  "text-light": $text-light,
+  "bg-header-footer": $lavander,
+  "bg-main": $dark-lavander,
+  "dark-grey": $dark-grey,
+  "text-dark": $eggplant-text,
+  "pale-lime": $pale-lime,
+
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "blue": $blue,
+  "violet": $violet,
+);
