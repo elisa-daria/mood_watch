@@ -13,6 +13,7 @@ import MoodTv from "/src/components/mood-watching/MoodTv";
 import MovieDetail from "/src/components/mood-watching/MovieDetail";
 import TvDetail from "/src/components/mood-watching/TvDetail";
 import ProfilePage from "./components/log-register/ProfilePage";
+import YourReign from "./components/queerdom/YourReign";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route element={<MoodTv />} path="/mood_tv/:color" />
           <Route element={<MovieDetail />} path="/movie/details/:id_movie" />
           <Route element={<TvDetail />} path="/tv/details/:id_tv" />
+          <Route element={<YourReign />} path="/your_reign" />
           <Route element={<NotFound />} path="*" />
         </Routes>
       </main>

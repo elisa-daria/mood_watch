@@ -10,7 +10,7 @@ const MWNavbar = () => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const navigate = useNavigate();
   return (
-    <Navbar expand="md">
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand onClick={() => navigate("/")} className="fw-bold">
           <i className="bi bi-camera-reels me-2"></i>
@@ -29,14 +29,24 @@ const MWNavbar = () => {
             </Link>
 
             {isAuthenticated ? (
-              <Link
-                to="/auth/profile"
-                className={`fw-bold nav-link ${
-                  location.pathname === "/auth/profile" ? "active" : ""
-                }`}
-              >
-                {`Hi, ${user}`}
-              </Link>
+              <>
+                <Link
+                  to="/auth/profile"
+                  className={`fw-bold nav-link ${
+                    location.pathname === "/auth/profile" ? "active" : ""
+                  }`}
+                >
+                  {`Hi, ${user}`}
+                </Link>
+                <Link
+                  to="/your_reign"
+                  className={`fw-bold nav-link ${
+                    location.pathname === "/your_reign" ? "active" : ""
+                  }`}
+                >
+                  Your Reign
+                </Link>
+              </>
             ) : (
               <>
                 <Link

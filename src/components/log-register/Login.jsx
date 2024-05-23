@@ -11,8 +11,8 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -75,7 +75,6 @@ const Login = () => {
                             <Form.Group
                               className="mb-3"
                               controlId="formBasicPwLog"
-                              onChange={(e) => setPassword(e.target.value)}
                             >
                               <Form.Label className="text-text-dark fs-2">
                                 Password
