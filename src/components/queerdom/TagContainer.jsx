@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 const TagContainer = () => {
   return (
-    <Container fluid className="flex-grow-1">
+    <Container fluid className="flex-grow-1 my-5">
       <Row>
         <Col xs={12}>
           <section className="bg-bg-main bg-dark-grey playground">

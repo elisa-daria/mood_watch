@@ -18,8 +18,8 @@ const YourReign = () => {
           </Col>
         </Row>
         <SearchingBar />
-        <TagContainer />
       </Container>
+      <TagContainer />
     </>
   );
 };
