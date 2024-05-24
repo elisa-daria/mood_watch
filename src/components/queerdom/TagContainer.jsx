@@ -31,20 +31,20 @@ const TagContainer = () => {
               </div>
               <div className="position-absolute bottom-50 end-50">
                 <Button variant="green" size="lg" className="playground-btn">
-                  should've been more gay
-                </Button>
-              </div>
-              <div className="position-absolute bottom-0 start-0">
-                <Button
-                  variant="blue"
-                  size="lg"
-                  className="playground-btn d-none d-sm-block"
-                >
                   fruity juice
                 </Button>
               </div>
+              <div className="position-absolute bottom-0 start-0">
+                <Button variant="blue" size="lg" className="playground-btn ">
+                  should've been more gay
+                </Button>
+              </div>
               <div className="position-absolute bottom-0 end-0">
-                <Button variant="violet" size="lg" className="playground-btn">
+                <Button
+                  variant="violet"
+                  size="lg"
+                  className="playground-btn d-none d-sm-block"
+                >
                   hidden in the closet
                 </Button>
               </div>
