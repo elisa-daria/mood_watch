@@ -68,11 +68,13 @@ const MWNavbar = () => {
               </>
             )}
             <NavDropdown
-              title="About Us"
+              title="About"
               id="basic-nav-dropdown"
               className="dropdown-menu-end"
             >
-              <NavDropdown.Item href="/auth/register">Boh</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.discorsivo.it/cineseries/2021/07/13/bury-your-gays-il-trope-narrativo-in-cui-non-vissero-per-sempre-felici-e-contenti/">
+                Trope
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
