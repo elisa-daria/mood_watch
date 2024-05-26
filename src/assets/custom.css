@@ -13311,6 +13311,28 @@ input[type=checkbox]:checked {
   cursor: pointer;
 }
 
+.navbar-nav .dropdown-menu {
+  position: static;
+  background: #453048;
+  margin-right: 1em;
+}
+
+.dropdown-item:active {
+  color: #453048;
+  text-decoration: none;
+  background-color: #dbbcdf;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #916496;
+  background-color: #dbbcdf;
+}
+
+.dropdown-item {
+  color: #dbbcdf;
+}
+
 .h-r {
   background-color: #202020;
   padding: 1em;

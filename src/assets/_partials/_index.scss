@@ -133,3 +133,22 @@ input[type="checkbox"]:checked {
 .navbar-brand {
   cursor: pointer;
 }
+.navbar-nav .dropdown-menu {
+  position: static;
+  background: $dark-lavander;
+  margin-right: 1em;
+}
+
+.dropdown-item:active {
+  color: $dark-lavander;
+  text-decoration: none;
+  background-color: $text-light;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: $lavander;
+  background-color: $text-light;
+}
+.dropdown-item {
+  color: $text-light;
+}
