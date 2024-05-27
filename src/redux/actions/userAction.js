@@ -23,10 +23,10 @@ export const logInUser = (credentials) => {
         );
       }
       const data = await response.json();
-      localStorage.setItem("token", data.token);
+      localStorage.setItem("accessToken", data.accessToken);
       dispatch({
         type: LOG_IN_SUCCESS,
-        payload: { email: credentials.email, token: data.token },
+        payload: { email: credentials.email, token: data.accessToken },
       });
     } catch (e) {
       dispatch({
@@ -41,14 +41,18 @@ export const fetchUserData = () => {
   return async (dispatch) => {
     dispatch({ type: FETCH_USER_REQUEST });
     try {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("accessToken");
       const response = await fetch("http://localhost:3002/users/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       if (!response.ok) {
-        throw new Error("Something went wrong. Try to log in again!");
+        throw new Error(
+          "Something went wrong. Try to log in again!" +
+            response.status +
+            response.statusText
+        );
       }
       const data = await response.json();
       dispatch({
@@ -56,6 +60,7 @@ export const fetchUserData = () => {
         payload: data,
       });
     } catch (error) {
+      console.log(error);
       dispatch({
         type: FETCH_USER_FAILURE,
         error: true,

@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 const MWNavbar = () => {
   const location = useLocation();
-  const { isAuthenticated, user } = useSelector((state) => state.user);
+  const { isAuthenticated } = useSelector((state) => state.user);
   const navigate = useNavigate();
   return (
     <Navbar expand="lg">
@@ -36,7 +36,7 @@ const MWNavbar = () => {
                     location.pathname === "/auth/profile" ? "active" : ""
                   }`}
                 >
-                  {`Hi, ${user}`}
+                  {`Hi 👋`}
                 </Link>
                 <Link
                   to="/your_reign"
