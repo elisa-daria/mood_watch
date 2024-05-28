@@ -11,7 +11,7 @@ export const logInUser = (credentials) => {
   return async (dispatch) => {
     dispatch({ type: LOG_IN_REQUEST });
     try {
-      const response = await fetch(myServer + `/auth/login`, {
+      const response = await fetch(myServer + "/auth/login", {
         method: "POST",
         body: JSON.stringify(credentials),
         headers: {

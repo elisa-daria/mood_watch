@@ -10,7 +10,7 @@ Funzionalità Principali:
 
 *Selezione basata sul Mood: Esprimi il tuo mood attraverso una palette di colori e scopri una selezione di contenuti adatti alle tue emozioni.
 *WatchList: Salva le tue scelte personalizzate per i giorni a venire.
-*Providers: In base al tuo indirizzo IP, scopri su quale piattaforma di streaming è disponibile il prodotto multimediale.
+\*Providers: In base al tuo indirizzo IP, scopri su quale piattaforma di streaming è disponibile il prodotto multimediale.
 -(Coming soon feature) Database di Rappresentazione LGBTQ+: Esplora una vasta gamma di serie TV e film con una forte rappresentazione queer, garantendoti una visione inclusiva e consapevole.
 -(Coming soon feature) Feedback degli Utenti: Contribuisci alla community con recensioni e tag personalizzati, migliorando continuamente l'esperienza per gli altri utenti.
 
@@ -22,5 +22,5 @@ Spring Security: Utilizzato per la salvaguardia dei dati e l'autenticazione degl
 Database: Si utilizza un database personale per archiviare e gestire i contenuti e le preferenze degli utenti.
 Integrazione con API: Si interagisce con API esterne per arricchire l'esperienza dell'utente e migliorare la qualità delle raccomandazioni.
 
-#deployed: 
-#backend link:https://github.com/elisa-daria/be-mood_watch
+#deployed: https://mood-watch.vercel.app/
+#backend link: https://github.com/elisa-daria/be-mood_watch
