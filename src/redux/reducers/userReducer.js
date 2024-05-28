@@ -1,6 +1,5 @@
-// import { LOG_IN, LOG_OUT } from "../actions/userAction";
-
 import {
+  CLEAR_ERRORS,
   FETCH_USER_FAILURE,
   FETCH_USER_REQUEST,
   FETCH_USER_SUCCESS,
@@ -62,6 +61,11 @@ const userReducer = (state = initialState, action) => {
       };
     case LOG_OUT:
       return initialState;
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        error: false,
+      };
 
     default:
       return state;

@@ -5,6 +5,7 @@ export const FETCH_USER_REQUEST = "FETCH_USER_REQUEST";
 export const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS";
 export const FETCH_USER_FAILURE = "FETCH_USER_FAILURE";
 export const LOG_OUT = "LOG_OUT";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const logInUser = (credentials) => {
   return async (dispatch) => {
@@ -71,7 +72,14 @@ export const fetchUserData = () => {
 
 export const logOutUser = () => {
   localStorage.removeItem("token");
+  localStorage.removeItem("newU_id");
   return {
     type: LOG_OUT,
+  };
+};
+
+export const clearErrors = () => {
+  return {
+    type: CLEAR_ERRORS,
   };
 };

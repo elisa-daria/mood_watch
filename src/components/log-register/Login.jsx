@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,7 +8,8 @@ import { useState, useEffect } from "react";
 import Loading from "/src/components/Loading.jsx";
 import CustomAlert from "/src/components/CustomAlert.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { logInUser } from "../../redux/actions/userAction";
+import { logInUser, clearErrors } from "../../redux/actions/userAction";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,9 +31,12 @@ const Login = () => {
       setNewU(true);
     }
   };
-
   useEffect(() => {
     handleNewU();
+  }, [newU]);
+
+  useEffect(() => {
+    dispatch(clearErrors());
   }, []);
 
   return isAuthenticated ? (
@@ -40,15 +45,19 @@ const Login = () => {
       className="flex-grow-1 d-flex flex-column align-items-center justify-content-center"
     >
       <Row>
-        <Col xs={12} className="h-l rounded-2 bg-bg-main">
-          <h1>Hi there! </h1>
+        <Col xs={12} className="h-l rounded-0 rounded-md-2 bg-bg-main ">
+          <h1>Hi there!</h1>
         </Col>
         <CustomAlert text="Welcome home" />
         <Col>
           <Col xs={12} className="text-center " id="logo">
-            <i className="bi bi-camera-reels me-2 display-1"></i>
-            <i className="bi bi-rainbow display-1"></i>
-            {/* <img src={MWlogo} alt="logo" id="logo" /> */}
+            <Link to="/" id="iconL">
+              {" "}
+              <i className="bi bi-camera-reels me-2 display-1 "></i>
+            </Link>
+            <Link to="/your_reign">
+              <i className="bi bi-rainbow display-1"></i>
+            </Link>
           </Col>
         </Col>
       </Row>
@@ -66,7 +75,7 @@ const Login = () => {
         {error && <CustomAlert text="Invalid email or password" />}
       </Row>
       <Row className="justify-content-center align-items-center flex-grow-1">
-        <Col xs={12} md={9} className="mb-3 mb-md-0">
+        <Col xs={12} md={9} className="my-2 my-md-0">
           <section className="bg-violet p-2">
             <section className="bg-blue p-2">
               <section className="bg-green p-2">
