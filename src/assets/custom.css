@@ -13638,6 +13638,10 @@ Image {
   overflow-y: scroll;
 }
 
+.watchListTitle {
+  cursor: pointer;
+}
+
 #searchbar {
   border-radius: 4px;
   background-color: #9fe1ce;

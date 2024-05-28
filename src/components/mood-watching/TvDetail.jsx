@@ -135,7 +135,7 @@ const TvDetail = () => {
                   })}
                 </span>
               </p>
-              <WatchListButton details={data} />
+              <WatchListButton details={data} media_type="tv" />
             </Col>
           </Row>
         )}

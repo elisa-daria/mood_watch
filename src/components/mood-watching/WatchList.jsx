@@ -6,10 +6,12 @@ import Badge from "react-bootstrap/Badge";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromWatchList } from "../../redux/actions/watchlistAction";
 import CustomAlert from "/src/components/CustomAlert.jsx";
+import { useNavigate } from "react-router-dom";
 
 const WatchList = () => {
   const watchlist = useSelector((state) => state.watchlist.content);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleRemove = (id) => {
     dispatch(removeFromWatchList(id));
@@ -31,7 +33,14 @@ const WatchList = () => {
                   className="d-flex justify-content-between align-items-start bg-bg-header-footer border-top-0 border-start-0 border-end-0 border-bottom-1"
                 >
                   <div className="ms-2 me-auto text-text-light">
-                    <div className="fw-bold">{el.name}</div>
+                    <div
+                      className="fw-bold watchListTitle"
+                      onClick={() =>
+                        navigate(`/${el.media_type}/details/${el.id}`)
+                      }
+                    >
+                      {el.name}
+                    </div>
                     {el.tagline && (
                       <span className="quote text-text-dark">{el.tagline}</span>
                     )}

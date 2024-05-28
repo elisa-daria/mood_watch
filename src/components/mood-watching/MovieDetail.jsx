@@ -124,7 +124,7 @@ const MovieDetail = () => {
                   })}
                 </span>
               </p>
-              <WatchListButton details={movie} />
+              <WatchListButton details={movie} media_type="movie" />
             </Col>
           </Row>
         )}
