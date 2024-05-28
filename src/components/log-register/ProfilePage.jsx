@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import WatchList from "../mood-watching/WatchList";
 import Loading from "/src/components/Loading.jsx";
 import CustomAlert from "/src/components/CustomAlert.jsx";
@@ -108,7 +109,7 @@ const ProfilePage = () => {
             <section className="bg-text-dark text-text-light text-center rounded-1 border-bg-main d-flex justify-content-evenly align-items-center p-2 my-2">
               <article>
                 <h6>
-                  Password: <span className="ms-1">{user.password}</span>
+                  Password <span className="ms-1">{user.password}</span>
                 </h6>
               </article>
             </section>

@@ -76,13 +76,13 @@ const MWNavbar = () => {
                 href="https://www.discorsivo.it/cineseries/2021/07/13/bury-your-gays-il-trope-narrativo-in-cui-non-vissero-per-sempre-felici-e-contenti/"
                 target="blank"
               >
-                Trope
+                Bury your gays
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item
+                href="https://www.discorsivo.it/cineseries/2021/06/14/bacio-tra-willow-e-tara-in-buffy-lesbian-kiss-episode/"
+                target="blank"
+              >
+                Lesbian kiss episode
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

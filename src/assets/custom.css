@@ -13333,6 +13333,11 @@ input[type=checkbox]:checked {
   color: #dbbcdf;
 }
 
+a {
+  color: #271629;
+  text-decoration: none;
+}
+
 .h-r {
   background-color: #202020;
   padding: 1em;
