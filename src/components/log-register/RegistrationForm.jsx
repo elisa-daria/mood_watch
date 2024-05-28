@@ -8,6 +8,7 @@ import CustomAlert from "/src/components/CustomAlert.jsx";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+const myServer = import.meta.env.VITE_SERVER_PORT;
 
 const RegistrationForm = () => {
   const [name, setName] = useState("");
@@ -40,7 +41,7 @@ const RegistrationForm = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:3002/auth/register", {
+      const response = await fetch(myServer + "/auth/register", {
         method: "POST",
         body: JSON.stringify({
           name,

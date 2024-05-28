@@ -6,12 +6,12 @@ export const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS";
 export const FETCH_USER_FAILURE = "FETCH_USER_FAILURE";
 export const LOG_OUT = "LOG_OUT";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
-
+const myServer = import.meta.env.VITE_SERVER_PORT;
 export const logInUser = (credentials) => {
   return async (dispatch) => {
     dispatch({ type: LOG_IN_REQUEST });
     try {
-      const response = await fetch("http://localhost:3002/auth/login", {
+      const response = await fetch(myServer + `/auth/login`, {
         method: "POST",
         body: JSON.stringify(credentials),
         headers: {
@@ -43,7 +43,7 @@ export const fetchUserData = () => {
     dispatch({ type: FETCH_USER_REQUEST });
     try {
       const token = localStorage.getItem("accessToken");
-      const response = await fetch("http://localhost:3002/users/me", {
+      const response = await fetch(myServer + "/users/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
